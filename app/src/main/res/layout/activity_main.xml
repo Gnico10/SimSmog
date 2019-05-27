@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:background="#BCE2F4"
+                android:gravity="start|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/fondo" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar_generating"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="0"
+                    tools:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:drawableStart="@drawable/ic_car"
+                        android:drawablePadding="5dp"
+                        android:foregroundGravity="center_vertical"
+                        android:gravity="center|end"
+                        android:singleLine="true"
+                        android:text="Parque Automotor actual"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textDirection="firstStrongRtl"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:drawableStart="@drawable/ic_sneeze"
+                        android:drawablePadding="5dp"
+                        android:foregroundGravity="center_vertical"
+                        android:gravity="center|end"
+                        android:lines="2"
+                        android:maxLines="2"
+                        android:singleLine="true"
+                        android:text="Polución máxima aceptada"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textDirection="firstStrongRtl"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:drawableStart="@drawable/ic_tow_truck"
+                        android:drawablePadding="5dp"
+                        android:foregroundGravity="center_vertical"
+                        android:gravity="center|end"
+                        android:singleLine="true"
+                        android:text="Autos en mal estado "
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textDirection="firstStrongRtl"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:drawableStart="@drawable/ic_bus"
+                        android:drawablePadding="5dp"
+                        android:foregroundGravity="center_vertical"
+                        android:gravity="center|end"
+                        android:singleLine="true"
+                        android:text="Frecuencia de colectivos"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textDirection="firstStrongRtl"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText_Parque_Actual"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:ems="10"
+                        android:hint="Cantidad"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/editText_Valor_PPM"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:ems="10"
+                        android:hint="PPM"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/editText_Parque_Actual4"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:ems="10"
+                        android:hint="%"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/editText_Parque_Actual5"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:ems="10"
+                        android:hint="Cantidad/Hora"
+                        android:inputType="textPersonName" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/sleepTime"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="0"
+                android:max="100" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Button" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="0"
+                android:background="#BBE0F3" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_weight="0" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
+
