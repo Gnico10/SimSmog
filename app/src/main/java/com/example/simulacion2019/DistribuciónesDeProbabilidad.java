@@ -7,7 +7,7 @@ public class DistribuciónesDeProbabilidad {
     }
 
     public static double poisson(double alfa){
-        //alfa es la cantiad de eventos por continuo (unidad de tiempo)
+        //alfa es la cantidad de eventos por continuo (unidad de tiempo)
 
         double b = Math.exp(-alfa);
 

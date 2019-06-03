@@ -20,8 +20,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
         LineChart chart = findViewById(R.id.chart);
 
        final GenPseudAleat rnd = new GenPseudAleat();
-
-
 
        rnd.generateAsync();
 
@@ -42,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
                 for(int i=0;i<1000;i++){
                     rnd.testDn(1000);
                 }
-
                 return true;
             }
         });
@@ -50,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-
 
                 LineChart chart = findViewById(R.id.chart);
 
@@ -108,4 +102,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 }

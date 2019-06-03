@@ -44,7 +44,6 @@ public class GenPseudAleat {
             }
             //  System.out.println(" valores: "+Arrays.toString(valores));
             return valores;
-
         }
 
         private Double[] generateValid(int tamanio) {
@@ -106,7 +105,6 @@ public class GenPseudAleat {
                 return generateValid(1000);
             }
             return null;
-
         }
 
         @Override
@@ -126,7 +124,6 @@ public class GenPseudAleat {
             if (poolLocation != null) {
                 poolLocation.setGenerando(true);
             }
-
         }
 
         @Override
@@ -214,13 +211,10 @@ public class GenPseudAleat {
         System.out.println("\n\n\nCantidad de secuencias generadas: " + i + "\nCon un Dn=" + (Dn - (0.01 * multip)) + "\n\n\n");
 
         return aleatorios;
-
-
     }
 
     public void testDn(int tamanio) {
         getDn(generate(tamanio));
-
     }
 
     public boolean validate(Double[] entrada, Double dnAlfa) {
