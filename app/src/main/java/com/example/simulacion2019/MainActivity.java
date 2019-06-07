@@ -28,34 +28,28 @@ public class MainActivity extends AppCompatActivity {
         LineChart chart = findViewById(R.id.chart);
 
        final GenPseudAleat rnd = new GenPseudAleat();
-
-       rnd.generateAsync();
-
-        findViewById(R.id.button).setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-
-                for(int i=0;i<1000;i++){
-                    rnd.testDn(1000);
-                }
-                return true;
-            }
-        });
+       final SimSmog simulacion = new SimSmog(rnd);
 
         findViewById(R.id.button).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                /*
                 LineChart chart = findViewById(R.id.chart);
 
                 List<Entry> entries = new ArrayList<>();
-                for (int i = 0; i < 10000; i=i+100) {
+
+                /*
+                for (int i = 0; i < 100000; i=i+100) {
                     // turn your data into Entry objects
-                    entries.add(new Entry(i, (rnd.get().floatValue())));
+                    entries.add(new Entry(i, (rnd.getNextPseudoaleatoreo().floatValue())));
                 }
 
+                float npseudo = rnd.getNextPseudoaleatoreo().floatValue();
+                System.out.println(npseudo);
+                entries.add(new Entry(100, npseudo));
+
                 LineDataSet dataSet = new LineDataSet(entries, "generados"); // add entries to dataset
-                dataSet.setColor(Color.RED);
+                dataSet.setColor(Color.BLUE);
                 dataSet.setValueTextColor(Color.RED); // styling, ...
 
                 List<ILineDataSet> dataSets = new ArrayList<ILineDataSet>();
@@ -65,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
                 chart.setData(lineDataValue);
 
                 chart.invalidate(); // refresh
+                */
+
+                System.out.println(simulacion.simular(30, 393384));
 
             }
         });
