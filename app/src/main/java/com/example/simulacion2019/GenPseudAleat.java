@@ -11,9 +11,11 @@ public class GenPseudAleat {
     private int a;
     private int c;
     private int m;
+
     private ArrayList<Double> random;
     private boolean generando = false;
     private static final double Dn = 0.055;
+    private long cantidadUsados = 0;
 
     /*
         Clase para la ejecución de una rutina que genera números pseudoaleatoreos
@@ -26,6 +28,7 @@ public class GenPseudAleat {
         private int c;
         private int m;
         private GenPseudAleat poolLocation;
+        private long timer =0;
 
         private Double[] generateValid(int tamanio) {
             // validación de los números pseudoaleatorios por prueba de Kolmogorov - Smirnov (K-S)
@@ -46,8 +49,8 @@ public class GenPseudAleat {
             }
             while (validate(aleatorios, Dn - (0.005 * multip)));
 
-            System.out.println("\n\n\nCantidad de secuencias generadas: " + loop + "\nCon un DnAlfa=" +
-                                (Dn - (0.01 * multip)) + "\n\n\n");
+          //  System.out.println("\n\n\nCantidad de secuencias generadas: " + loop +
+            //                  "\nCon un DnAlfa=" +(Dn - (0.01 * multip)) + "\n\n\n");
 
             return aleatorios;
         } // Generación de números pseudoaleatorios validos por prueba (K-S)
@@ -85,8 +88,8 @@ public class GenPseudAleat {
                 // 3) Se calcula la distribución acumulada por  cada uno de los números generados.
                 acumulada = ((double) i / (double) entrada.length);
 
-                // 4) Se calcula el estaduistico K-S recorriendo cada uno de los números y quedandose con la mayor
-                // diferencia entre el acumulado correspondiente y el número aleatoreo.
+                // 4) Se calcula el estadistico K-S recorriendo cada uno de los números y quedandose
+                // con la diferencia entre el acumulado correspondiente y el número aleatoreo.
                 diferencia = Math.abs(acumulada - ordenado[i]);
 
                 if (diferencia > Dn) {
@@ -110,24 +113,28 @@ public class GenPseudAleat {
                 c = (int) (semilla % 125000);
                 m = a + c + (int) (semilla % 5000000);
 
-                // Manda a generar 10000 nuevos números pseudoaleatoreos.
-                return generateValid(10000);
+                // Manda a generar 1000 nuevos números pseudoaleatoreos. El Dn está determinado como
+                // el valor promedio para 1000, por lo que si se cambia el tiempo varía significativamente.
+                return generateValid(1000);
             }
             return null;
         }
 
         @Override
         protected void onPostExecute(Double[] result) {
-
             // Manda a guardarse los números generados.
             poolLocation.addToPool(result);
             if (result != null & poolLocation != null) {
                 poolLocation.setGenerando(false);
             }
+            System.out.println("Hay " + poolLocation.getPoolSize() + " numeros aleatorios ("
+                                +(System.currentTimeMillis()-timer)+" ms).");
+
         }
 
         @Override
         protected void onPreExecute() {
+            timer = System.currentTimeMillis();
             if (poolLocation != null) {
                 poolLocation.setGenerando(true);
             }
@@ -143,10 +150,15 @@ public class GenPseudAleat {
         generateAsync();
     }
 
+    public int getPoolSize() {
+        return random.size();
+    }
+
     public Double getNextPseudoaleatoreo() {
         // Devuelve un valor de entre todos los generados.
         Double devol;
-        System.out.println(this.toString());
+        cantidadUsados++;
+
         try {
             // random es una lista de números aleatores guardados con anterioridad.
             devol = random.get(0);
@@ -159,17 +171,20 @@ public class GenPseudAleat {
             }
             return devol;
         } catch (IndexOutOfBoundsException e) {
-            e.printStackTrace();
+            System.out.println("¡La lista de números pseudoaleatorios está vacía! se van usando: "+cantidadUsados);
             random.clear();
-            // En caso de no haber números aleatoreos, son generados y luego devueltos.
-            addToPool(generateValid(5000));
+            // En caso de no haber números aleatoreos, son generados y luego devueltos. esto debe ser un valor chico para no retrasar tanto la simulación
+            addToPool(generateValid(100));
             return getNextPseudoaleatoreo();
         }
     }
 
     public void generateAsync() {
         // Lanza un nuevo hilo de ejecuación para la generación de números pseudoaleatoreos.
-        new GenerateAsync().execute(this);
+        for(int i=0;i<150;i++){ //genero 250 secuencias de 1000 números
+                new GenerateAsync().execute(this);
+        }
+
     }
 
     private void addToPool(Double[] nuevos) {
@@ -201,8 +216,8 @@ public class GenPseudAleat {
         }
         while (validate(aleatorios, Dn - (0.005 * multip)));
 
-        System.out.println("\n\n\nCantidad de secuencias generadas: " + loop +
-                            "\nCon un DnAlfa=" + (Dn - (0.01 * multip)) + "\n\n\n");
+       // System.out.println("\n\n\nCantidad de secuencias generadas: " + loop +
+        //        "\nCon un DnAlfa=" + (Dn - (0.01 * multip)) + "\n\n\n");
 
         return aleatorios;
     }

@@ -31,6 +31,7 @@ public final class SimSmog {
         Pa = ParqueAct;
 
         for(int dia = 1; dia <= d; dia++){
+            System.out.println("Día: "+ dia);
             simularDia();
         }
 
@@ -43,7 +44,7 @@ public final class SimSmog {
                 CCO <= (4400 * Math.pow(110,2) * 20)){
 
             //Nivel 1
-            return "Nivel: 1 \n " +
+            return "Nivel: 1 \n" +
                     "Banda: Bajo \n"+
                     "Personas en riesgo: Disfruta de tus actividades habituales al aire libre.\n"+
                     "Población gral: Disfruta de tus actividades habituales al aire libre.\n"+
@@ -61,7 +62,7 @@ public final class SimSmog {
                 CCO <= (9400 * Math.pow(110,2) * 20)){
 
             //Nivel 2
-            return "Nivel: 2 \n " +
+            return "Nivel: 2 \n" +
                     "Banda: Bajo \n"+
                     "Personas en riesgo: Disfruta de tus actividades habituales al aire libre.\n"+
                     "Población gral: Disfruta de tus actividades habituales al aire libre.\n"+
@@ -78,7 +79,7 @@ public final class SimSmog {
                 CCO >= (12400 * Math.pow(110,2) * 20)){
 
             //Nivel 3
-            return "Nivel: 3 \n " +
+            return "Nivel: 3 \n" +
                     "Banda: Alto \n"+
                     "Personas en riesgo: Disfruta de tus actividades habituales al aire libre.\n"+
                     "Población gral: Disfruta de tus actividades habituales al aire libre."+
@@ -95,7 +96,7 @@ public final class SimSmog {
                 CCO <= (15400 * Math.pow(110,2) * 20)){
 
             //Nivel 4
-            return "Nivel: 4 \n " +
+            return "Nivel: 4 \n" +
                     "Banda: Moderado \n"+
                     "Personas en riesgo: Los niños con problemas pulmonares, y adultos con problemas " +
                                         "pulmonares/ cardíacos, que experimentan síntomas, deben considerar " +
@@ -114,7 +115,7 @@ public final class SimSmog {
                 CCO <= (30400 * Math.pow(110,2) * 20)){
 
             //Nivel 5
-            return "Nivel: 5 \n " +
+            return "Nivel: 5 \n" +
                     "Banda: Moderado \n"+
                     "Personas en riesgo: Los niños con problemas pulmonares, y adultos con problemas " +
                                         "pulmonares/ cardíacos, que experimentan síntomas, deben considerar " +
@@ -133,7 +134,7 @@ public final class SimSmog {
                 CCO <= (30400 * Math.pow(110,2) * 20)){
 
             //Nivel 6
-            return "Nivel: 6 \n " +
+            return "Nivel: 6 \n" +
                     "Banda: Moderado \n"+
                     "Personas en riesgo: Los niños con problemas pulmonares, y adultos con problemas " +
                                         "pulmonares/ cardíacos, que experimentan síntomas, deben considerar " +
@@ -152,7 +153,7 @@ public final class SimSmog {
                 CCO <= (40400 * Math.pow(110,2) * 20)){
 
             //Nivel 7
-            return "Nivel: 7 \n " +
+            return "Nivel: 7 \n" +
                     "Banda: Alto \n"+
                     "Personas en riesgo: Los niños con problemas pulmonares, y adultos con problemas " +
                                         "pulmonares/cardíacos, deben reducir el esfuerzo físico intenso, " +
@@ -174,7 +175,7 @@ public final class SimSmog {
                 CCO <= (40400 * Math.pow(110,2) * 20)){
 
             //Nivel 8
-            return "Nivel: 8 \n " +
+            return "Nivel: 8 \n" +
                     "Banda: Alto \n"+
                     "Personas en riesgo: Los niños con problemas pulmonares, y adultos con problemas " +
                                         "pulmonares/cardíacos, deben reducir el esfuerzo físico intenso, " +
@@ -196,7 +197,7 @@ public final class SimSmog {
                 CCO <= (40400 * Math.pow(110,2) * 20)){
 
             //Nivel 9
-            return "Nivel: 9 \n " +
+            return "Nivel: 9 \n" +
                     "Banda: Alto \n"+
                     "Personas en riesgo: Los niños con problemas pulmonares, y adultos con problemas " +
                                         "pulmonares/cardíacos, deben reducir el esfuerzo físico intenso, " +
@@ -213,7 +214,7 @@ public final class SimSmog {
 
         }else{
             //Nivel 10
-            return "Nivel: 10 \n " +
+            return "Nivel: 10 \n" +
                     "Banda: Muy Alto \n"+
                     "Personas en riesgo: Los niños con problemas pulmonares, adultos con problemas pulmonares/ cardíacos " +
                                         "y las personas mayores de edad deben evitar la actividad física extenuante. Las personas " +
@@ -270,15 +271,21 @@ public final class SimSmog {
         // Calculo del caudal de vehículos que pasan por cada calle tenída en cuenta por cada hora del día.
         // Funcion polinomial de tendencia de datos de Google Maps.
         for (int t = 1; t <= 24; t++) {
+            System.out.println("Hora: "+t);
             int Csf = (int) ((Pa / 6250) * (-0.0001735583 * Math.pow(t, 3) + 0.0006015723 * Math.pow(t, 2) + 0.1024126236));
             int Cb = (int) ((Pa / 2777) * (-0.0000187516 * Math.pow(t, 5) + 0.0011141716 * Math.pow(t, 4) - 0.0239325241 * Math.pow(t, 3) + 0.218239282 * Math.pow(t, 2) - 0.6962625685 * t + 0.8311836904));
             int Cmp = (int) ((Pa / 1887) * (-0.0000011697 * Math.pow(t, 6) + 0.0000643631 * Math.pow(t, 5) - 0.0011292477 * Math.pow(t, 4) + 0.0046414858 * Math.pow(t, 3) + 0.0460776330 * Math.pow(t, 2) + 0.2762486787 * t + 0.5339823064));
             int Ca = (int) ((Pa/934) * (-0.0003407824 * Math.pow(t,3) + 0.0070874777 * Math.pow(t,2) + 0.0356608971 * t + 0.1182947487));
 
-            actContaminante(Csf); // Actualización de concentación de contaminantes para la calle Santa Fé.
-            actContaminante(Cb); // Actualización de concentación de contaminantes para la calle Balcarce.
-            actContaminante(Cmp); // Actualización de concentación de contaminantes para la calle Marcos Páz.
-            actContaminante(Ca); // Actualización de concentación de contaminantes para la calle Avellaneda.
+            System.out.println("Santa Fé: "+Csf+", Barlcarce: "+Cb+", Marcoz Páz: "+Cmp+", Avellaneda: "+Ca);
+            System.out.println("Calle Santa Fé");
+            actContaminante(300); // Actualización de concentación de contaminantes para la calle Santa Fé.
+            System.out.println("Calle Balcarce");
+            actContaminante(300); // Actualización de concentación de contaminantes para la calle Balcarce.
+            System.out.println("Calle Marcos Páz");
+            actContaminante(300); // Actualización de concentación de contaminantes para la calle Marcos Páz.
+            System.out.println("Calle Avellaneda");
+            actContaminante(300); // Actualización de concentación de contaminantes para la calle Avellaneda.
         }
     }
 

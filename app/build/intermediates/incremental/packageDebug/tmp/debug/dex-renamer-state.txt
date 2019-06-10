@@ -1,7 +1,7 @@
-#Fri Jun 07 11:18:16 ART 2019
-base.0=C\:\\Users\\Gaston\\Desktop\\SimSmog\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+#Mon Jun 10 19:27:09 ART 2019
+base.0=C\:\\Users\\Mundos Virtuales\\Desktop\\SimSmog\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Users\\Gaston\\Desktop\\SimSmog\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
+base.1=C\:\\Users\\Mundos Virtuales\\Desktop\\SimSmog\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out

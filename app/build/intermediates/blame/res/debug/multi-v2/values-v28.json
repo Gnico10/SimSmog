@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Gaston\\Desktop\\SimSmog\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v28\\values-v28.xml",
+            "outputFile": "C:\\Users\\Mundos Virtuales\\Desktop\\SimSmog\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v28\\values-v28.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Gaston\\.gradle\\caches\\transforms-2\\files-2.1\\87ae98e6812d3d32c61af5bd8544f321\\res\\values-v28\\values-v28.xml",
+                    "source": "C:\\Users\\Mundos Virtuales\\.gradle\\caches\\transforms-2\\files-2.1\\dfa369b93bbaa2d890f4d254c4d0b327\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",

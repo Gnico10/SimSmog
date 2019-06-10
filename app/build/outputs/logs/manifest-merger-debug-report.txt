@@ -1,157 +1,157 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:1-21:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\87ae98e6812d3d32c61af5bd8544f321\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\233d0cc6f3bf9bd0a1c7eab23b38434b\AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\0c7d7be27bb89b50f8673635052dc877\AndroidManifest.xml:2:1-20:12
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\27baed174e178e2d8ff37671fd52fa9b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\100c9bb98392b80af27ffa754aced103\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\86efe2e1994d49b8e7bac9b39a0480ff\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\cf6fd7040d020e99cf441d0e8f32bf47\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\9b63d8e2e508c3984c645a7ffd6e3459\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\c422cccc396936869a8f412572bd26b3\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\21d58830088156688ad6ae51e2466cd6\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\d86d0d6c70a21c68bf6d16683c6e4443\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\418aae2756e2af4b8bfb0fbfeec08ebe\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\80534c3c2aa2a77f40f95373657f4fcb\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\de10b68080566feb39276db2865b503f\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\39df6e98ff72ba3f2bde0e0da1754e2a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\665140abb7130006eba8fff8d46fb95c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\54073a462fe311240f7f85005e2c46d2\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\dea059b305ce24c8bb2b013fec6bca39\AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\a763e8f6a9ab5c5c791cfff3b8e54238\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\56dfe1741f3b0c091d83053455439d56\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\16e032d4dac33ba2d34d7b6106ee46f2\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\156bad136c783aa6f40d665e55e44004\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\badde141366080215027d278b65b58aa\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\ac6510de8dd7763842231aacc1fdf929\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\38ffcce444681fa43538c7b3ba1e61f4\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\5cadb2e9bc0e8774e7f75a1ddd7b5f5c\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\fa50d124571b52e4d58bcc6bcdbbd3ef\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\4fcad190465d3cd3c653799d38fa0b1c\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:1-21:12
+ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:1-21:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\dfa369b93bbaa2d890f4d254c4d0b327\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\73a151dd20ee075c43d84671a2bca360\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\83b374b6e81c62e0001b6fcf4970c50d\AndroidManifest.xml:2:1-20:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\288dc11111bb7f8073b1a60c66afbe95\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\900788013e878186db4666dff5e3e139\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\12745c117dfa537af5dfa03bc11fc473\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\b94d31d29e4b5368e41e4c923c08a35b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\d12f75516e72648a8a5ae0a525aa699a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\fd85109e8d26f8953bfae12898055462\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\81aa2c68be886a55ff63eefbcf2c04e3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\2f03491d258ca45c0a6fbeef19fadf76\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\bbc5276cbbd126474dcd123c4f5ac44a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\e029e68456fe8fb2924c43119d0857c4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\63d3c675bf84e08d43ef7500d6662f51\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\32ab4897d53c7b3c057217e2e37ec215\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\f7ea66f8c99be875d3f543dc722ffa54\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\07a9feeb01a8a6a780e1dfe7c1d126b1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\47376e89011feded2fdc79ca4659387f\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\1337c6a08e225c1467ca67c0565af7a5\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\b01f9caf3476c333e52f08576bde3041\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\55f22367240d0c152a2c29631731bc47\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\bfb342c867997ede658916e8f8dd187c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\21f8f106542a765ea00b7e38e8657e18\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\6f68a31a54da2c0c87faf05aeb90375f\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\e38ec4ca0f5ac30149a87578ee731681\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\42685cd14331a8e07561557aea7a5d4d\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\7fa875e951e93723e351fdeca35b695c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\2f6e6c7cccf5909b45181d9e66307267\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:1-21:12
 	package
-		ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:3:5-41
-		INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:3:5-41
+		INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:1-21:12
-		INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:1-21:12
+		INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:1-21:12
-		INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:1-21:12
+		INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:5:5-19:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\233d0cc6f3bf9bd0a1c7eab23b38434b\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\233d0cc6f3bf9bd0a1c7eab23b38434b\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\54073a462fe311240f7f85005e2c46d2\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\54073a462fe311240f7f85005e2c46d2\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\dea059b305ce24c8bb2b013fec6bca39\AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\dea059b305ce24c8bb2b013fec6bca39\AndroidManifest.xml:22:5-23:19
+ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:5:5-19:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\73a151dd20ee075c43d84671a2bca360\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\73a151dd20ee075c43d84671a2bca360\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\07a9feeb01a8a6a780e1dfe7c1d126b1\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\07a9feeb01a8a6a780e1dfe7c1d126b1\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\47376e89011feded2fdc79ca4659387f\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\47376e89011feded2fdc79ca4659387f\AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\54073a462fe311240f7f85005e2c46d2\AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\07a9feeb01a8a6a780e1dfe7c1d126b1\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:11:9-40
 activity#com.example.simulacion2019.MainActivity
-ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:12:9-18:20
+ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:12:19-47
+		ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:12:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:13:13-17:29
+ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:14:17-69
+ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:14:17-69
 	android:name
-		ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:14:25-66
+		ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:14:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:16:17-77
+ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:16:17-77
 	android:name
-		ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml:16:27-74
+		ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml:16:27-74
 uses-sdk
-INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\87ae98e6812d3d32c61af5bd8544f321\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\87ae98e6812d3d32c61af5bd8544f321\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\233d0cc6f3bf9bd0a1c7eab23b38434b\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\233d0cc6f3bf9bd0a1c7eab23b38434b\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\0c7d7be27bb89b50f8673635052dc877\AndroidManifest.xml:16:5-18:41
-MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\0c7d7be27bb89b50f8673635052dc877\AndroidManifest.xml:16:5-18:41
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\27baed174e178e2d8ff37671fd52fa9b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\27baed174e178e2d8ff37671fd52fa9b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\100c9bb98392b80af27ffa754aced103\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\100c9bb98392b80af27ffa754aced103\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\86efe2e1994d49b8e7bac9b39a0480ff\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\86efe2e1994d49b8e7bac9b39a0480ff\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\cf6fd7040d020e99cf441d0e8f32bf47\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\cf6fd7040d020e99cf441d0e8f32bf47\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\9b63d8e2e508c3984c645a7ffd6e3459\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\9b63d8e2e508c3984c645a7ffd6e3459\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\c422cccc396936869a8f412572bd26b3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\c422cccc396936869a8f412572bd26b3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\21d58830088156688ad6ae51e2466cd6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\21d58830088156688ad6ae51e2466cd6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\d86d0d6c70a21c68bf6d16683c6e4443\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\d86d0d6c70a21c68bf6d16683c6e4443\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\418aae2756e2af4b8bfb0fbfeec08ebe\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\418aae2756e2af4b8bfb0fbfeec08ebe\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\80534c3c2aa2a77f40f95373657f4fcb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\80534c3c2aa2a77f40f95373657f4fcb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\de10b68080566feb39276db2865b503f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\de10b68080566feb39276db2865b503f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\39df6e98ff72ba3f2bde0e0da1754e2a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\39df6e98ff72ba3f2bde0e0da1754e2a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\665140abb7130006eba8fff8d46fb95c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\665140abb7130006eba8fff8d46fb95c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\54073a462fe311240f7f85005e2c46d2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\54073a462fe311240f7f85005e2c46d2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\dea059b305ce24c8bb2b013fec6bca39\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\dea059b305ce24c8bb2b013fec6bca39\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\a763e8f6a9ab5c5c791cfff3b8e54238\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\a763e8f6a9ab5c5c791cfff3b8e54238\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\56dfe1741f3b0c091d83053455439d56\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\56dfe1741f3b0c091d83053455439d56\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\16e032d4dac33ba2d34d7b6106ee46f2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\16e032d4dac33ba2d34d7b6106ee46f2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\156bad136c783aa6f40d665e55e44004\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\156bad136c783aa6f40d665e55e44004\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\badde141366080215027d278b65b58aa\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\badde141366080215027d278b65b58aa\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\ac6510de8dd7763842231aacc1fdf929\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\ac6510de8dd7763842231aacc1fdf929\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\38ffcce444681fa43538c7b3ba1e61f4\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\38ffcce444681fa43538c7b3ba1e61f4\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\5cadb2e9bc0e8774e7f75a1ddd7b5f5c\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\5cadb2e9bc0e8774e7f75a1ddd7b5f5c\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\fa50d124571b52e4d58bcc6bcdbbd3ef\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\fa50d124571b52e4d58bcc6bcdbbd3ef\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\4fcad190465d3cd3c653799d38fa0b1c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Gaston\.gradle\caches\transforms-2\files-2.1\4fcad190465d3cd3c653799d38fa0b1c\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\dfa369b93bbaa2d890f4d254c4d0b327\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\dfa369b93bbaa2d890f4d254c4d0b327\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\73a151dd20ee075c43d84671a2bca360\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\73a151dd20ee075c43d84671a2bca360\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\83b374b6e81c62e0001b6fcf4970c50d\AndroidManifest.xml:16:5-18:41
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\83b374b6e81c62e0001b6fcf4970c50d\AndroidManifest.xml:16:5-18:41
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\288dc11111bb7f8073b1a60c66afbe95\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\288dc11111bb7f8073b1a60c66afbe95\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\900788013e878186db4666dff5e3e139\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\900788013e878186db4666dff5e3e139\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\12745c117dfa537af5dfa03bc11fc473\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\12745c117dfa537af5dfa03bc11fc473\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\b94d31d29e4b5368e41e4c923c08a35b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\b94d31d29e4b5368e41e4c923c08a35b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\d12f75516e72648a8a5ae0a525aa699a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\d12f75516e72648a8a5ae0a525aa699a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\fd85109e8d26f8953bfae12898055462\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\fd85109e8d26f8953bfae12898055462\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\81aa2c68be886a55ff63eefbcf2c04e3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\81aa2c68be886a55ff63eefbcf2c04e3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\2f03491d258ca45c0a6fbeef19fadf76\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\2f03491d258ca45c0a6fbeef19fadf76\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\bbc5276cbbd126474dcd123c4f5ac44a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\bbc5276cbbd126474dcd123c4f5ac44a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\e029e68456fe8fb2924c43119d0857c4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\e029e68456fe8fb2924c43119d0857c4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\63d3c675bf84e08d43ef7500d6662f51\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\63d3c675bf84e08d43ef7500d6662f51\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\32ab4897d53c7b3c057217e2e37ec215\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\32ab4897d53c7b3c057217e2e37ec215\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\f7ea66f8c99be875d3f543dc722ffa54\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\f7ea66f8c99be875d3f543dc722ffa54\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\07a9feeb01a8a6a780e1dfe7c1d126b1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\07a9feeb01a8a6a780e1dfe7c1d126b1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\47376e89011feded2fdc79ca4659387f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\47376e89011feded2fdc79ca4659387f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\1337c6a08e225c1467ca67c0565af7a5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\1337c6a08e225c1467ca67c0565af7a5\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\b01f9caf3476c333e52f08576bde3041\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\b01f9caf3476c333e52f08576bde3041\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\55f22367240d0c152a2c29631731bc47\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\55f22367240d0c152a2c29631731bc47\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\bfb342c867997ede658916e8f8dd187c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\bfb342c867997ede658916e8f8dd187c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\21f8f106542a765ea00b7e38e8657e18\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\21f8f106542a765ea00b7e38e8657e18\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\6f68a31a54da2c0c87faf05aeb90375f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\6f68a31a54da2c0c87faf05aeb90375f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\e38ec4ca0f5ac30149a87578ee731681\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\e38ec4ca0f5ac30149a87578ee731681\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\42685cd14331a8e07561557aea7a5d4d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\42685cd14331a8e07561557aea7a5d4d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\7fa875e951e93723e351fdeca35b695c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\7fa875e951e93723e351fdeca35b695c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\2f6e6c7cccf5909b45181d9e66307267\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Mundos Virtuales\.gradle\caches\transforms-2\files-2.1\2f6e6c7cccf5909b45181d9e66307267\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Gaston\Desktop\SimSmog\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Mundos Virtuales\Desktop\SimSmog\app\src\main\AndroidManifest.xml
