@@ -277,15 +277,14 @@ public final class SimSmog {
             int Cmp = (int) ((Pa / 1887) * (-0.0000011697 * Math.pow(t, 6) + 0.0000643631 * Math.pow(t, 5) - 0.0011292477 * Math.pow(t, 4) + 0.0046414858 * Math.pow(t, 3) + 0.0460776330 * Math.pow(t, 2) + 0.2762486787 * t + 0.5339823064));
             int Ca = (int) ((Pa/934) * (-0.0003407824 * Math.pow(t,3) + 0.0070874777 * Math.pow(t,2) + 0.0356608971 * t + 0.1182947487));
 
-            System.out.println("Santa Fé: "+Csf+", Barlcarce: "+Cb+", Marcoz Páz: "+Cmp+", Avellaneda: "+Ca);
             System.out.println("Calle Santa Fé");
-            actContaminante(300); // Actualización de concentación de contaminantes para la calle Santa Fé.
+            actContaminante(Csf); // Actualización de concentación de contaminantes para la calle Santa Fé.
             System.out.println("Calle Balcarce");
-            actContaminante(300); // Actualización de concentación de contaminantes para la calle Balcarce.
+            actContaminante(Cb); // Actualización de concentación de contaminantes para la calle Balcarce.
             System.out.println("Calle Marcos Páz");
-            actContaminante(300); // Actualización de concentación de contaminantes para la calle Marcos Páz.
+            actContaminante(Cmp); // Actualización de concentación de contaminantes para la calle Marcos Páz.
             System.out.println("Calle Avellaneda");
-            actContaminante(300); // Actualización de concentación de contaminantes para la calle Avellaneda.
+            actContaminante(Ca); // Actualización de concentación de contaminantes para la calle Avellaneda.
         }
     }
 
@@ -354,6 +353,7 @@ public final class SimSmog {
         Vt = Vt * 1000; // Pasaje a (m / h)
 
         // Concentraciones de contaminantes en (mg).
+        System.out.print(Vt);
         CCO = (CO * 110)/(Vt * 20);
         CNox = (Nox * 110)/(Vt * 20);
         CSO2 = (SO2 * 110)/(Vt * 20);

@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
                 chart.invalidate(); // refresh
                 */
-
+                System.out.print(System.currentTimeMillis());
                 System.out.println(simulacion.simular(30, 393384));
 
             }

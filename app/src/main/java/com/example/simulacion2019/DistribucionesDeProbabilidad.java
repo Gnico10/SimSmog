@@ -10,12 +10,13 @@ public class DistribucionesDeProbabilidad {
 
     public double normal(double media,double desvio){
         double sum =0;
+        double u;
 
         for (int i = 0; i < 12; i++){
-            sum = sum + rnd.getNextPseudoaleatoreo();
+            u = rnd.getNextPseudoaleatoreo();
+            sum = sum + u;
         }
         return desvio * (sum - 6) + media;
-
     }
 
     public double poisson(double alfa){

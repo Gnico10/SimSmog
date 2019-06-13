@@ -104,7 +104,6 @@ public class GenPseudAleat {
 
         @Override
         protected Double[] doInBackground(GenPseudAleat... params) {
-
             if (params[0] != null) {
                 poolLocation = params[0];
 
@@ -127,6 +126,7 @@ public class GenPseudAleat {
             if (result != null & poolLocation != null) {
                 poolLocation.setGenerando(false);
             }
+
             System.out.println("Hay " + poolLocation.getPoolSize() + " numeros aleatorios ("
                                 +(System.currentTimeMillis()-timer)+" ms).");
 
@@ -139,15 +139,16 @@ public class GenPseudAleat {
                 poolLocation.setGenerando(true);
             }
         }
-
-        @Override
-        protected void onProgressUpdate(Void... values) {
-        }
     }
 
     public GenPseudAleat() {
         random = new ArrayList<>();
         generateAsync();
+
+        semilla = last = System.currentTimeMillis();
+        a = (int) (semilla % 100000);
+        c = (int) (semilla % 125000);
+        m = a + c + (int) (semilla % 5000000);
     }
 
     public int getPoolSize() {
@@ -155,7 +156,7 @@ public class GenPseudAleat {
     }
 
     public Double getNextPseudoaleatoreo() {
-        // Devuelve un valor de entre todos los generados.
+        // Devuelve el proximo valor entre todos los generados.
         Double devol;
         cantidadUsados++;
 
@@ -171,7 +172,7 @@ public class GenPseudAleat {
             }
             return devol;
         } catch (IndexOutOfBoundsException e) {
-            System.out.println("¡La lista de números pseudoaleatorios está vacía! se van usando: "+cantidadUsados);
+           // System.out.println("¡La lista de números pseudoaleatorios está vacía! se van usando: "+cantidadUsados);
             random.clear();
             // En caso de no haber números aleatoreos, son generados y luego devueltos. esto debe ser un valor chico para no retrasar tanto la simulación
             addToPool(generateValid(100));
@@ -181,7 +182,7 @@ public class GenPseudAleat {
 
     public void generateAsync() {
         // Lanza un nuevo hilo de ejecuación para la generación de números pseudoaleatoreos.
-        for(int i=0;i<150;i++){ //genero 250 secuencias de 1000 números
+        for(int i=0;i<150;i++){ //genero 150 secuencias de 1000 números
                 new GenerateAsync().execute(this);
         }
 
@@ -198,29 +199,48 @@ public class GenPseudAleat {
         this.generando = generando;
     }
 
+
+
+
+
     // Metodos para una ejecución sincrónica de números pseudoaleatorios en caso de quedarse
     // sin números y estar generando en segundo plano.
     // Métodos iguales a los de la clase asincrona.
+
     private Double[] generateValid(int tamanio) {
+        // validación de los números pseudoaleatorios por prueba de Kolmogorov - Smirnov (K-S)
         Double[] aleatorios;
         int loop = 0;
         int multip = 0;
+
         do {
+            // 1) Generación de los números pseudoaleatorios.
             aleatorios = generate(tamanio);
 
             loop = loop + 1;
 
+            //Se ajusta el dnalfa para una comprobación más exigente.
             if (loop % 500 == 0) {
                 multip = multip + 1;
             }
         }
         while (validate(aleatorios, Dn - (0.005 * multip)));
 
-       // System.out.println("\n\n\nCantidad de secuencias generadas: " + loop +
-        //        "\nCon un DnAlfa=" + (Dn - (0.01 * multip)) + "\n\n\n");
+        //  System.out.println("\n\n\nCantidad de secuencias generadas: " + loop +
+        //                  "\nCon un DnAlfa=" +(Dn - (0.01 * multip)) + "\n\n\n");
 
         return aleatorios;
-    }
+    } // Generación de números pseudoaleatorios validos por prueba (K-S)
+
+    private Double[] generate(int tamanio) {
+        Double[] valores = new Double[tamanio];
+
+        for (int i = 0; i < tamanio; i++) {
+            valores[i] = generateOne();
+        }
+        //  System.out.println(" valores: "+Arrays.toString(valores));
+        return valores;
+    } // Genera una lista de números pseudoaleatoreos.
 
     private Double generateOne() {
         // Método congruencial mixto.
@@ -229,25 +249,7 @@ public class GenPseudAleat {
         resultado = (resultado % 1000000) / 1000000;
 
         return (double) resultado;
-
     } // Genera el siguiente número pseaudoaleatoreo.
-
-    private Double[] generate(int tamanio) {
-        // Metodo congruencial mixto para generación de números pseudoaleatoreos.
-        // Semilla generada a partir de la hora en milisegundos.
-        semilla = last = System.currentTimeMillis();
-        a = (int) (semilla % 100000);
-        c = (int) (semilla % 125000);
-        m = a + c + (int) (semilla % 5000000);
-        Double[] valores = new Double[tamanio];
-
-        for (int i = 0; i < tamanio; i++) {
-            // Se guardan tantos valores como se indicó que se generaran.
-            valores[i] = generateOne();
-        }
-        //  System.out.println(" valores: "+Arrays.toString(valores));
-        return valores;
-    } // Generación de números pseudoaleatoreos con el método congruencial mixto.
 
     private boolean validate(Double[] entrada, Double dnAlfa) {
         // validación de los números pseudoaleatorios por prueba de Kolmogorov - Smirnov (K-S).
@@ -257,18 +259,26 @@ public class GenPseudAleat {
 
         Double Dn = (double) 0;
 
+        // 2) Los números generados son ordenados.
         Arrays.sort(ordenado);
         for (int i = 0; i < ordenado.length; i++) {
-
+            // 3) Se calcula la distribución acumulada por  cada uno de los números generados.
             acumulada = ((double) i / (double) entrada.length);
+
+            // 4) Se calcula el estadistico K-S recorriendo cada uno de los números y quedandose
+            // con la diferencia entre el acumulado correspondiente y el número aleatoreo.
             diferencia = Math.abs(acumulada - ordenado[i]);
 
             if (diferencia > Dn) {
                 Dn = diferencia;
             }
         }
+        //System.out.println(Dn);
+
+        // Retorna si pasa o no la prueba.
         return Dn < dnAlfa;
     }
+
 
     @Override
     public String toString() {
