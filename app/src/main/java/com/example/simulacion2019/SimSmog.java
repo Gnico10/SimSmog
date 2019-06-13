@@ -17,7 +17,7 @@ public final class SimSmog {
     //Variables acumuladoras de gases emitidos medidos en g/km por vehículo.
     private double CO = 0, Nox = 0, SO2 = 0, PM = 0, CO2 = 0;
 
-    static final private boolean debugging = true;
+    static final private boolean debugging = false;
 
 
     private static GenPseudAleat rnd;
@@ -30,9 +30,28 @@ public final class SimSmog {
 
     static private class DistribuciónVehículosPHora {
         private int hora;
+        private int dia;
+        private int parqueActual;
         private int Anaf = 0, Agas = 0, Agnc = 0;
         private int Vnaf = 0, Vgas = 0, VCgas = 0;
         private int Ogas = 0;
+
+
+        public int getDia() {
+            return dia;
+        }
+
+        public void setDia(int dia) {
+            this.dia = dia;
+        }
+
+        public int getParqueActual() {
+            return parqueActual;
+        }
+
+        public void setParqueActual(int parqueActual) {
+            this.parqueActual = parqueActual;
+        }
 
         public DistribuciónVehículosPHora(int hora) {
             this.hora = hora;
@@ -46,6 +65,19 @@ public final class SimSmog {
             Vnaf = vnaf;
             Vgas = vgas;
             VCgas = vCgas;
+            Ogas = ogas;
+        }
+
+        public DistribuciónVehículosPHora(int hora, int dia, int parqueActual, int anaf, int agas, int agnc, int vnaf, int vgas, int VCgas, int ogas) {
+            this.hora = hora;
+            this.dia = dia;
+            this.parqueActual = parqueActual;
+            Anaf = anaf;
+            Agas = agas;
+            Agnc = agnc;
+            Vnaf = vnaf;
+            Vgas = vgas;
+            this.VCgas = VCgas;
             Ogas = ogas;
         }
 
@@ -117,6 +149,8 @@ public final class SimSmog {
         public String toString() {
             return "DistribuciónVehículosPHora{" +
                     "hora=" + hora +
+                    ", dia=" + dia +
+                    ", parqueActual=" + parqueActual +
                     ", Anaf=" + Anaf +
                     ", Agas=" + Agas +
                     ", Agnc=" + Agnc +
@@ -138,6 +172,12 @@ public final class SimSmog {
         //Este método habría que cambiarlo por BroadcastReceiver con onHandleIntent
         //Explicación -> https://stackoverflow.com/a/25232563
 
+        int parqueAutomotorActual = 0;
+
+        public void setParqueAutomotorActual(int parqueAutomotorActual) {
+            this.parqueAutomotorActual = parqueAutomotorActual;
+        }
+
         public void setPbar_aleatorios(ProgressBar pbar_aleatorios) {
             this.pbar_aleatorios = pbar_aleatorios;
         }
@@ -146,61 +186,117 @@ public final class SimSmog {
             this.pbar_estado = pbar_estado;
         }
 
-        @Override
-        protected DistribuciónVehículosPHora[] doInBackground(Integer... cantidad_horas) {
+        private int crecimientoParqueAutomotor(int parqueActual) {
+            double u = rnd.getNextPseudoaleatoreo();
+            int Pd = 0;
 
-            vectorVehiculosPHora = new DistribuciónVehículosPHora[cantidad_horas[0]];
-
-            for (int hora = 0; hora < cantidad_horas[0]; hora++) {
-
-                int vehículos_totales = calcCantSF(hora % 24) + calcCantB(hora % 24) + calcCantMP(hora % 24) + calcCantA(hora % 24);
-
-                int Anaf = 0, Agas = 0, Agnc = 0;
-                int Vnaf = 0, Vgas = 0, VCgas = 0;
-                int Ogas = 0;
-
-                for (int v = 0; v < vehículos_totales; v++) {
-                    double u = rnd.getNextPseudoaleatoreo();
-
-                    if (u <= 0.371) { // Automovil a nafta.
-                        Anaf++;
-                    } else if (u <= 0.641) { // Automovil a Gasoil
-                        Agas++;
-                    } else if (u <= 0.757) { // Automovil a GNC.
-                        Agnc++;
-                    } else if (u <= 0.879) { // Vehículo utilitatio liviano a Nafta.
-                        Vnaf++;
-                    } else if (u <= 0.946) { // Vehículos utilitarios livianos a Gasoil.
-                        Vgas++;
-                    } else if (u <= 0.994) { // Vehículos de carga a Gasoil.
-                        VCgas++;
-                    } else { // Ómnibus a Gasoil.
-                        Ogas++;
-                    }
-                }
-
-                vectorVehiculosPHora[hora] =  new DistribuciónVehículosPHora(hora,Anaf,Agas,Agnc,Vnaf,Vgas,VCgas,Ogas);
-
-                publishProgress(vectorVehiculosPHora[hora]);
+            if (u <= 0.099) {
+                u = rnd.getNextPseudoaleatoreo();
+                Pd = (int) Math.round(23 + 16 * u);
+            } else if (u <= 0.414) {
+                u = rnd.getNextPseudoaleatoreo();
+                Pd = (int) Math.round(55 + 16 * u);
+            } else if (u <= 0.711) {
+                u = rnd.getNextPseudoaleatoreo();
+                Pd = (int) Math.round(39 + 16 * u);
+            } else if (u <= 0.855) {
+                u = rnd.getNextPseudoaleatoreo();
+                Pd = (int) Math.round(55 + 16 * u);
+            } else if (u <= 0.954) {
+                u = rnd.getNextPseudoaleatoreo();
+                Pd = (int) Math.round(87 + 16 * u);
+            } else if (u <= 0.981) {
+                u = rnd.getNextPseudoaleatoreo();
+                Pd = (int) Math.round(103 + 16 * u);
+            } else if (u <= 0.982) {
+                u = rnd.getNextPseudoaleatoreo();
+                Pd = (int) Math.round(119 + 16 * u);
+            } else {
+                u = rnd.getNextPseudoaleatoreo();
+                Pd = (int) Math.round(135 + 16 * u);
             }
 
-            return new DistribuciónVehículosPHora[1];
+            return Pd;
+
+
+        }
+
+        @Override
+        protected DistribuciónVehículosPHora[] doInBackground(Integer... cantidad_dias) {
+
+            vectorVehiculosPHora = new DistribuciónVehículosPHora[cantidad_dias[0] * 24 + 1];
+
+            int AnafT = 0, AgasT = 0, AgncT = 0;
+            int VnafT = 0, VgasT = 0, VCgasT = 0;
+            int OgasT = 0;
+
+            //Variables que cuentan el total de vehículos
+
+            for (int dia = 0; dia < cantidad_dias[0]; dia++) {
+
+                parqueAutomotorActual = crecimientoParqueAutomotor(parqueAutomotorActual) + parqueAutomotorActual;
+
+                for (int hora = 0; hora < 24; hora++) {
+
+                    int vehiculos_totales = calcCantSF(hora, parqueAutomotorActual) + calcCantB(hora, parqueAutomotorActual) + calcCantMP(hora, parqueAutomotorActual) + calcCantA(hora, parqueAutomotorActual);
+
+                    int Anaf = 0, Agas = 0, Agnc = 0;
+                    int Vnaf = 0, Vgas = 0, VCgas = 0;
+                    int Ogas = 0;
+
+                    for (int v = 0; v < vehiculos_totales; v++) {
+                        double u = rnd.getNextPseudoaleatoreo();
+
+                        if (u <= 0.371) { // Automovil a nafta.
+                            Anaf++;
+                            AnafT++;
+                        } else if (u <= 0.641) { // Automovil a Gasoil
+                            Agas++;
+                            AgasT++;
+                        } else if (u <= 0.757) { // Automovil a GNC.
+                            Agnc++;
+                            AgncT++;
+                        } else if (u <= 0.879) { // Vehículo utilitatio liviano a Nafta.
+                            Vnaf++;
+                            VnafT++;
+                        } else if (u <= 0.946) { // Vehículos utilitarios livianos a Gasoil.
+                            Vgas++;
+                            VgasT++;
+                        } else if (u <= 0.994) { // Vehículos de carga a Gasoil.
+                            VCgas++;
+                            VCgasT++;
+                        } else { // Ómnibus a Gasoil.
+                            Ogas++;
+                            OgasT++;
+                        }
+                    }
+
+                    vectorVehiculosPHora[(dia * 24) + hora] = new DistribuciónVehículosPHora(hora, dia, parqueAutomotorActual, Anaf, Agas, Agnc, Vnaf, Vgas, VCgas, Ogas);
+
+                    publishProgress(vectorVehiculosPHora[(dia * 24) + hora]);
+                }
+            }
+
+            vectorVehiculosPHora[vectorVehiculosPHora.length - 1] = new DistribuciónVehículosPHora(-1, -1, -1, AnafT, AgasT, AgncT, VnafT, VgasT, VCgasT, OgasT);
+
+            return vectorVehiculosPHora;
         }
 
         @Override
         protected void onProgressUpdate(DistribuciónVehículosPHora... values) {
             Mostrar(values[0].toString());
-            try{
-                pbar_aleatorios.setProgress(rnd.getCantidadGenerados()-rnd.getCantidadUsados());
-                pbar_estado.setProgress(values[0].getHora());
-            }catch (NullPointerException ignored){
+            try {
+                pbar_aleatorios.setProgress(rnd.getCantidadGenerados() - rnd.getCantidadUsados());
+                pbar_estado.setProgress((values[0].getDia() * 24) + values[0].getHora());
+            } catch (NullPointerException ignored) {
 
             }
         }
 
         @Override
         protected void onPostExecute(DistribuciónVehículosPHora[] result) {
-            Mostrar("Se ha demorado: "+(System.currentTimeMillis()-demora) +" simulando "+result.length+" horas.");
+            System.out.println("Contadores Totales: " + result[result.length - 1]);
+            System.out.println("Se ha demorado: " + (System.currentTimeMillis() - demora) + " ms simulando " + result.length + " horas y usando " + rnd.getCantidadUsados() + " números pseudoaleatorios.");
         }
 
         @Override
@@ -450,19 +546,19 @@ public final class SimSmog {
         simularHora();
     }
 
-    private static int calcCantSF(int hora) {
+    private static int calcCantSF(int hora, int parqueAutomotor) {
         return (int) (64 * (rnd.getNextPseudoaleatoreo() + 0.5));//(int) ((Pa / 6250) * (-0.0001735583 * Math.pow(hora, 3) + 0.0006015723 * Math.pow(hora, 2) + 0.1024126236));
     }
 
-    private static int calcCantB(int hora) {
+    private static int calcCantB(int hora, int parqueAutomotor) {
         return (int) (143 * (rnd.getNextPseudoaleatoreo() + 0.5));//(int) ((Pa / 2777) * (-0.0000187516 * Math.pow(t, 5) + 0.0011141716 * Math.pow(t, 4) - 0.0239325241 * Math.pow(t, 3) + 0.218239282 * Math.pow(t, 2) - 0.6962625685 * t + 0.8311836904));
     }
 
-    private static int calcCantMP(int hora) {
+    private static int calcCantMP(int hora, int parqueAutomotor) {
         return (int) (210 * (rnd.getNextPseudoaleatoreo() + 0.5));//(int) ((Pa / 1887) * (-0.0000011697 * Math.pow(t, 6) + 0.0000643631 * Math.pow(t, 5) - 0.0011292477 * Math.pow(t, 4) + 0.0046414858 * Math.pow(t, 3) + 0.0460776330 * Math.pow(t, 2) + 0.2762486787 * t + 0.5339823064));
     }
 
-    private static int calcCantA(int hora) {
+    private static int calcCantA(int hora, int parqueAutomotor) {
         return (int) (423 * (rnd.getNextPseudoaleatoreo() + 0.5));//(int) ((Pa / 934) * (-0.0003407824 * Math.pow(t, 3) + 0.0070874777 * Math.pow(t, 2) + 0.0356608971 * t + 0.1182947487));
     }
 
@@ -470,10 +566,10 @@ public final class SimSmog {
         // Calculo del caudal de vehículos que pasan por cada calle tenída en cuenta por cada hora del día.
         // Funcion polinomial de tendencia de datos de Google Maps.
         for (int t = 1; t <= 24; t++) {
-            int Csf = calcCantSF(t);
-            int Cb = calcCantB(t);
-            int Cmp = calcCantMP(t);
-            int Ca = calcCantA(t);
+            int Csf = calcCantSF(t, 10);
+            int Cb = calcCantB(t, 10);
+            int Cmp = calcCantMP(t, 10);
+            int Ca = calcCantA(t, 10);
 
             actContaminante(Csf); // Actualización de concentación de contaminantes para la calle Santa Fé.
             actContaminante(Cb); // Actualización de concentación de contaminantes para la calle Balcarce.
@@ -554,9 +650,9 @@ public final class SimSmog {
         CCO2 = (CO2 * 110) / (Vt * 20);
     }
 
-    static private void Mostrar(String texto){
-        if(debugging){
-            System.out.println("En SimSmog -> "+ texto);
+    static private void Mostrar(String texto) {
+        if (debugging) {
+            System.out.println("En SimSmog -> " + texto);
         }
     }
 }

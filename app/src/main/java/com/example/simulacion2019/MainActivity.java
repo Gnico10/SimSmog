@@ -62,11 +62,13 @@ public class MainActivity extends AppCompatActivity {
                 // System.out.println(simulacion.simular(3650, 393384));
                 // System.out.println("Demora: "+(System.currentTimeMillis()-timeStart));
                 ProgressBar estado = findViewById(R.id.progressBar_Simulac);
-                estado.setMax(87600);
+                int CantDías = 365;
+                estado.setMax(CantDías*24);
                 SimSmog.CalcularContaminación calc = new SimSmog.CalcularContaminación();
                 calc.setPbar_aleatorios((ProgressBar) findViewById(R.id.progressBar_rand));
                 calc.setPbar_estado(estado);
-                calc.execute(87600);
+                calc.execute(CantDías);
+
 
             }
         });
