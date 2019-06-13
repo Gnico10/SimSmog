@@ -5,9 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.SeekBar;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
@@ -27,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
         LineChart chart = findViewById(R.id.chart);
 
-       final GenPseudAleat rnd = new GenPseudAleat();
-       final SimSmog simulacion = new SimSmog(rnd);
+        final GenPseudAleat rnd = new GenPseudAleat(this);
+        final SimSmog simulacion = new SimSmog(rnd);
 
         findViewById(R.id.button).setOnClickListener(new OnClickListener() {
             @Override
@@ -60,8 +58,15 @@ public class MainActivity extends AppCompatActivity {
 
                 chart.invalidate(); // refresh
                 */
-
-                System.out.println(simulacion.simular(30, 393384));
+                //long timeStart = System.currentTimeMillis();
+                // System.out.println(simulacion.simular(3650, 393384));
+                // System.out.println("Demora: "+(System.currentTimeMillis()-timeStart));
+                ProgressBar estado = findViewById(R.id.progressBar_Simulac);
+                estado.setMax(87600);
+                SimSmog.CalcularContaminación calc = new SimSmog.CalcularContaminación();
+                calc.setPbar_aleatorios((ProgressBar) findViewById(R.id.progressBar_rand));
+                calc.setPbar_estado(estado);
+                calc.execute(87600);
 
             }
         });
@@ -70,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         List<Entry> entries = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
             // turn your data into Entry objects
-            entries.add(new Entry(2019+i, i));
+            entries.add(new Entry(2019 + i, i));
         }
 
         LineDataSet dataSet = new LineDataSet(entries, "Polución [PPM]"); // add entries to dataset
@@ -80,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         List<Entry> maxValue = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
             // turn your data into Entry objects
-            maxValue.add(new Entry(2019+i, 15));
+            maxValue.add(new Entry(2019 + i, 15));
         }
 
         LineDataSet dataSetValue = new LineDataSet(maxValue, "Maximo permitido [PPM]"); // add entries to dataset
